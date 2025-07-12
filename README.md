@@ -42,11 +42,10 @@ Customizable and Extendable: This configuration is designed to be easily customi
 
         git clone <your-repo-url> "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 
-
-
-        nvim
-
     On the first launch, lazy.nvim will automatically install all the plugins.
+
+       nvim
+   
 
 # 📖 Getting Started
 To get a better understanding of how this configuration works and how to customize it, I highly recommend watching this video:
