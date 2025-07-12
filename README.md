@@ -40,7 +40,7 @@ Customizable and Extendable: This configuration is designed to be easily customi
 
     Linux and macOS:
 
-        git clone (https://github.com/Mohamed-El-Mouhib/mynvim.config.git) "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+        git clone https://github.com/Mohamed-El-Mouhib/mynvim.config.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 
     On the first launch, lazy.nvim will automatically install all the plugins.
 
