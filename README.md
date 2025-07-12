@@ -43,8 +43,9 @@ Customizable and Extendable: This configuration is designed to be easily customi
         git clone <your-repo-url> "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 
 
-nvim
-On the first launch, lazy.nvim will automatically install all the plugins.
+        nvim
+
+    On the first launch, lazy.nvim will automatically install all the plugins.
 
 # 📖 Getting Started
 To get a better understanding of how this configuration works and how to customize it, I highly recommend watching this video:
@@ -73,13 +74,3 @@ Where can I find more information about a specific plugin?
 
 You can find more information about a specific plugin by visiting its GitHub repository. You can also use the :Lazy command to view the installed plugins and their documentation.
 
-
-YouTube
-Can you summarize this video?
-
-The Only Video You Need to Get Started with Neovim
-TJ DeVries
-Opens in a new window
-Going from no set up to being instantly productive using kickstart.nvim in #nvim. Check out the repo, it has detailed instructions for installing on your OS: https://github.com/nvim-lua/kickstart.nvim If you really like my teaching style, I'm working on courses for https://boot.dev/teej - Feel free to ask me more in stream :) Links for Copy Pasting: - You have to of course install neovim! https://github.com/neovim/neovim/blob/master/INSTALL.md - PLEASE READ ** https://github.com/nvim-lua/kickstart.nvim/ ** PLEASE READ - IF YOU HAVE AN EXISTING CONFIG, PLEASE READ WHAT TO DO FROM KICKSTART README: https://github.com/nvim-lua/kickstart.nvim/?tab=readme-ov-file#faq The command I pasted (on linux): - git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim NOTE: You can't have anything in your nvim folder for this to work. So back up your old config (if you have any) and then remove the folder. PDE Video: https://youtu.be/QMVIJhC9Veg ### Links Twitch: https://twitch.tv/teej_dv Twitter: https://twitter.com/teej_dv Github: https://github.com/tjdevries #coding #neovim #typescript #programming #vim #softwareengineering #codinglife #webdesign #webdevelopment #webdev #javascript #rustlang #rust #twitch #twitchstreamer #programmerhumor #codinghumor #software #softwareengineer #softwaredeveloper #softwaredevelopment
-Opens in a new window
-YouTube video views will be stored in your YouTube History, and your data will be stored and used by YouTube according to its Terms of Service
