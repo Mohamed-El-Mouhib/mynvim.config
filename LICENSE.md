@@ -1,4 +1,6 @@
   ****🛠️ My Neovim Config (Kickstart-based)****
+
+  
 This is my personal Neovim configuration built on top of the awesome kickstart.nvim starter template. I’ve extended it by adding extra plugins, settings, and tweaks to suit my workflow.
 
 ✨ Features
