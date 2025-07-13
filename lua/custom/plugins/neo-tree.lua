@@ -11,18 +11,18 @@ return {
       window = {
         width = 30,
         mappings = {
-          ['<space>'] = 'toggle_node',
           ['<cr>'] = 'open',
           ['S'] = 'split_with_window_picker',
           ['s'] = 'vsplit_with_window_picker',
           ['t'] = 'open_tabnew',
+          ['H'] = 'toggle_hidden', -- Shift+H to toggle hidden files
         },
       },
       filesystem = {
         filtered_items = {
-          visible = true,
-          hide_dotfiles = false,
-          hide_gitignored = false,
+          visible = false, -- Hide hidden files by default
+          hide_dotfiles = true,
+          hide_gitignored = true,
         },
       },
     }
