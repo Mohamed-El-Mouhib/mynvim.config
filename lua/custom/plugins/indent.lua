@@ -1,4 +1,4 @@
--- File: ~/.config/nvim/lua/plugins/indent.lua
+-- -- File: ~/.config/nvim/lua/plugins/indent.lua
 return {
   'lukas-reineke/indent-blankline.nvim',
   main = 'ibl',
@@ -6,8 +6,8 @@ return {
     indent = { char = '│' }, -- alternatives: "┊", "¦", "┆"
     scope = {
       enabled = true,
-      show_start = false,
-      show_end = false,
+      -- show_start = false,
+      -- show_end = false,
     },
     exclude = {
       filetypes = {
