@@ -18,7 +18,6 @@ return {
 
 		-- Setup neo-tree
 		require("neo-tree").setup({
-			close_if_last_window = true, -- Close Neo-tree if it is the last window
 			window = {
 				width = 30,
 				mappings = {
