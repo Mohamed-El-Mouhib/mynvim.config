@@ -1,6 +1,13 @@
 return {
 	"hrsh7th/nvim-cmp",
-	dependencies = { "L3MON4D3/LuaSnip" },
+	dependencies = {
+		"L3MON4D3/LuaSnip",
+		"hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-path",
+		"L3MON4D3/LuaSnip", -- snippets
+		"saadparwaiz1/cmp_luasnip",
+	},
 	opts = function(_, opts)
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
