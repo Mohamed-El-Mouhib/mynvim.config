@@ -1,4 +1,3 @@
--- -- File: ~/.config/nvim/lua/plugins/indent.lua
 return {
 	"lukas-reineke/indent-blankline.nvim",
 	main = "ibl",
@@ -7,17 +6,5 @@ return {
 		scope = {
 			enabled = true,
 		},
-		-- exclude = {
-		--   filetypes = {
-		--     'help',
-		--     'alpha',
-		--     'dashboard',
-		--     'lazy',
-		--     'mason',
-		--     'neo-tree',
-		--     'Trouble',
-		--     'toggleterm',
-		--   },
-		-- },
 	},
 }
