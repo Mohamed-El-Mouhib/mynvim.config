@@ -3,36 +3,18 @@ return {
 	branch = "v3.x",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		"nvim-tree/nvim-web-devicons", -- optional
-		"MunifTanjim/nui.nvim",
+		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
-		-- Setup the autocmd for window resizing
-		vim.api.nvim_create_autocmd("WinClosed", {
-			callback = function()
-				vim.defer_fn(function()
-					vim.cmd("wincmd =")
-				end, 50)
-			end,
-		})
-
-		-- Setup neo-tree
 		require("neo-tree").setup({
-			window = {
-				width = 30,
-				mappings = {
-					["<cr>"] = "open",
-					["S"] = "split_with_window_picker",
-					["s"] = "vsplit_with_window_picker",
-					["t"] = "open_tabnew",
-					["H"] = "toggle_hidden", -- Shift+H to toggle hidden files
-				},
-			},
-			filesystem = {
-				filtered_items = {
-					visible = false, -- Hide hidden files by default
-					hide_dotfiles = true,
-					hide_gitignored = true,
+			close_if_last_window = true,
+			window = { width = 30 },
+			event_handlers = {
+				{
+					event = "file_opened",
+					handler = function()
+						require("neo-tree.command").execute({ action = "close" })
+					end,
 				},
 			},
 		})
