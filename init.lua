@@ -95,6 +95,22 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "html", "css", "js" },
+	callback = function()
+		vim.opt_local.shiftwidth = 2
+		vim.opt_local.tabstop = 2
+		vim.opt_local.softtabstop = 2
+	end,
+})
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "cpp", "hpp" },
+	callback = function()
+		vim.opt_local.shiftwidth = 3
+		vim.opt_local.tabstop = 3
+		vim.opt_local.softtabstop = 3
+	end,
+})
 -- vim.o.guifont = 'Iosevka:h14' -- Change h14 to your preferred size
 -- Make line numbers default
 vim.o.number = true
