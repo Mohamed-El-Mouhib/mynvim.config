@@ -1,76 +1,119 @@
-# My Neovim Kickstart Configuration
-This is my personal Neovim configuration, based on the excellent kickstart.nvim. It's designed to be a lightweight, well-documented, and powerful starting point for anyone looking to get started with Neovim.
+# mynvim.config/
 
-# 🚀 Features
+<a href="https://dotfyle.com/Mohamed-El-Mouhib/mynvimconfig"><img src="https://dotfyle.com/Mohamed-El-Mouhib/mynvimconfig/badges/plugins?style=flat" /></a>
+<a href="https://dotfyle.com/Mohamed-El-Mouhib/mynvimconfig"><img src="https://dotfyle.com/Mohamed-El-Mouhib/mynvimconfig/badges/leaderkey?style=flat" /></a>
+<a href="https://dotfyle.com/Mohamed-El-Mouhib/mynvimconfig"><img src="https://dotfyle.com/Mohamed-El-Mouhib/mynvimconfig/badges/plugin-manager?style=flat" /></a>
 
 
-This configuration includes a curated set of plugins and settings to provide a modern and efficient development environment. Here are some of the key features:
+## Install Instructions
 
-Plugin Management with lazy.nvim: All plugins are managed using the fast and easy-to-use lazy.nvim plugin manager. You can easily add, remove, or update plugins by modifying the init.lua file.
+ > Install requires Neovim 0.9+. Always review the code before installing a configuration.
 
-Fuzzy Finding with Telescope: Quickly find files, buffers, and more with the powerful fuzzy finder, Telescope.
+Clone the repository and install the plugins:
 
-LSP and Autocompletion: Full support for the Language Server Protocol (LSP) for features like go-to-definition, find-references, and diagnostics. Autocompletion is provided by nvim-cmp, which integrates with various sources like LSP, snippets, and more.
+```sh
+git clone git@github.com:Mohamed-El-Mouhib/mynvim.config ~/.config/Mohamed-El-Mouhib/mynvim.config
+```
 
-Syntax Highlighting with Tree-sitter: Enjoy fast and accurate syntax highlighting with nvim-treesitter.
+Open Neovim with this config:
 
-Git Integration: Seamless integration with Git, allowing you to see diffs, blame, and more directly in the editor.
+```sh
+NVIM_APPNAME=Mohamed-El-Mouhib/mynvim.config/ nvim
+```
 
-Customizable and Extendable: This configuration is designed to be easily customized. You can add your own plugins, keymaps, and settings to tailor it to your workflow.
+## Plugins
 
-# ⚙️ Installation
-1. Install Neovim
-    First, you'll need to install Neovim. This configuration targets the latest stable and nightly versions of Neovim. You can find the installation instructions for your operating system on the Neovim website.
+### ai
 
-2. Install Dependencies
++ [CopilotC-Nvim/CopilotChat.nvim](https://dotfyle.com/plugins/CopilotC-Nvim/CopilotChat.nvim)
+### colorscheme
 
-    Next, you'll need to install some external dependencies:
++ [catppuccin/nvim](https://dotfyle.com/plugins/catppuccin/nvim)
+### comment
 
-    Basic Utilities: git, make, unzip, and a C compiler (gcc).
++ [folke/todo-comments.nvim](https://dotfyle.com/plugins/folke/todo-comments.nvim)
+### completion
 
-    File Searching: ripgrep and fd.
++ [zbirenbaum/copilot.lua](https://dotfyle.com/plugins/zbirenbaum/copilot.lua)
++ [hrsh7th/nvim-cmp](https://dotfyle.com/plugins/hrsh7th/nvim-cmp)
+### diagnostics
 
-    Clipboard: xclip or xsel on Linux, or win32yank on Windows.
++ [folke/trouble.nvim](https://dotfyle.com/plugins/folke/trouble.nvim)
+### editing-support
 
-    Nerd Font (Optional): For icons and a better visual experience, it's recommended to install a Nerd Font.
++ [nvim-treesitter/nvim-treesitter-context](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter-context)
+### file-explorer
 
-4. Clone the Configuration
-   
-    Now, you can clone this configuration to your Neovim configuration directory.
++ [nvim-neo-tree/neo-tree.nvim](https://dotfyle.com/plugins/nvim-neo-tree/neo-tree.nvim)
+### formatting
 
-    Linux and macOS:
++ [stevearc/conform.nvim](https://dotfyle.com/plugins/stevearc/conform.nvim)
+### fuzzy-finder
 
-        git clone https://github.com/Mohamed-El-Mouhib/mynvim.config.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
++ [ibhagwan/fzf-lua](https://dotfyle.com/plugins/ibhagwan/fzf-lua)
++ [nvim-telescope/telescope.nvim](https://dotfyle.com/plugins/nvim-telescope/telescope.nvim)
+### git
 
-    On the first launch, lazy.nvim will automatically install all the plugins.
++ [lewis6991/gitsigns.nvim](https://dotfyle.com/plugins/lewis6991/gitsigns.nvim)
+### icon
 
-       nvim
-   
++ [nvim-tree/nvim-web-devicons](https://dotfyle.com/plugins/nvim-tree/nvim-web-devicons)
+### indent
 
-# 📖 Getting Started
-To get a better understanding of how this configuration works and how to customize it, I highly recommend watching this video:
++ [NMAC427/guess-indent.nvim](https://dotfyle.com/plugins/NMAC427/guess-indent.nvim)
++ [lukas-reineke/indent-blankline.nvim](https://dotfyle.com/plugins/lukas-reineke/indent-blankline.nvim)
+### keybinding
 
-The Only Video You Need to Get Started with Neovim: This video by TJ DeVries, a core Neovim maintainer, provides a comprehensive overview of the kickstart philosophy, core Neovim concepts, and how to configure plugins. [00:35]
++ [folke/which-key.nvim](https://dotfyle.com/plugins/folke/which-key.nvim)
+### lsp
 
-# ❓ FAQ
-How do I add a new plugin?
++ [neovim/nvim-lspconfig](https://dotfyle.com/plugins/neovim/nvim-lspconfig)
+### lsp-installer
 
-You can add a new plugin by adding a new entry to the plugins table in your init.lua file. For example, to add a new plugin from GitHub, you would add a line like this:
++ [williamboman/mason.nvim](https://dotfyle.com/plugins/williamboman/mason.nvim)
+### nvim-dev
 
-    { 'owner/repo.nvim' }
++ [folke/lazydev.nvim](https://dotfyle.com/plugins/folke/lazydev.nvim)
++ [MunifTanjim/nui.nvim](https://dotfyle.com/plugins/MunifTanjim/nui.nvim)
++ [nvim-lua/plenary.nvim](https://dotfyle.com/plugins/nvim-lua/plenary.nvim)
+### plugin-manager
 
-How do I customize a plugin's configuration?
++ [folke/lazy.nvim](https://dotfyle.com/plugins/folke/lazy.nvim)
+### search
 
-You can customize a plugin's configuration by adding an opts table to its entry in the plugins table. For example:
++ [nvim-pack/nvim-spectre](https://dotfyle.com/plugins/nvim-pack/nvim-spectre)
+### snippet
 
-    {
-      'owner/repo.nvim',
-      opts = {
-        -- your configuration options here
-      }
-    }
++ [L3MON4D3/LuaSnip](https://dotfyle.com/plugins/L3MON4D3/LuaSnip)
++ [rafamadriz/friendly-snippets](https://dotfyle.com/plugins/rafamadriz/friendly-snippets)
+### startup
 
-Where can I find more information about a specific plugin?
++ [goolord/alpha-nvim](https://dotfyle.com/plugins/goolord/alpha-nvim)
+### statusline
 
-You can find more information about a specific plugin by visiting its GitHub repository. You can also use the :Lazy command to view the installed plugins and their documentation.
++ [nvim-lualine/lualine.nvim](https://dotfyle.com/plugins/nvim-lualine/lualine.nvim)
+### syntax
 
++ [nvim-treesitter/nvim-treesitter-textobjects](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter-textobjects)
++ [nvim-treesitter/nvim-treesitter](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter)
+### tabline
+
++ [akinsho/bufferline.nvim](https://dotfyle.com/plugins/akinsho/bufferline.nvim)
+### terminal-integration
+
++ [akinsho/toggleterm.nvim](https://dotfyle.com/plugins/akinsho/toggleterm.nvim)
+### utility
+
++ [rcarriga/nvim-notify](https://dotfyle.com/plugins/rcarriga/nvim-notify)
++ [Diogo-ss/42-header.nvim](https://dotfyle.com/plugins/Diogo-ss/42-header.nvim)
++ [echasnovski/mini.nvim](https://dotfyle.com/plugins/echasnovski/mini.nvim)
++ [folke/noice.nvim](https://dotfyle.com/plugins/folke/noice.nvim)
+## Language Servers
+
++ bashls
++ html
++ lua_ls
++ marksman
+
+
+ This readme was generated by [Dotfyle](https://dotfyle.com)
