@@ -76,36 +76,40 @@ end
 
 -- Open class picker
 local openClassPicker = function()
-	-- Get all .h and .hpp files in the current directory as a list
-	local h_files = vim.fn.glob("*.h", false, true)
-	local hpp_files = vim.fn.glob("*.hpp", false, true)
-
-	-- Combine both lists
-	local files = {}
-	for _, file in ipairs(h_files) do
-		table.insert(files, file)
-	end
-	for _, file in ipairs(hpp_files) do
-		table.insert(files, file)
-	end
-
-	-- Process the list to remove the extension
-	local classes = {}
-	for _, file in ipairs(files) do
-		-- removes the last extension
-		table.insert(classes, vim.fn.fnamemodify(file, ":r"))
-	end
-
-	-- Check if any header files were found
-	if #classes == 0 then
-		vim.notify("No .h or .hpp files found in current directory", vim.log.levels.WARN)
+	-- Directory of the current file
+	local dir = vim.fn.expand("%:p:h")
+	if dir == "" then
+		vim.notify("No file directory found", vim.log.levels.WARN)
 		return
 	end
 
-	-- UI picker
+	-- Get header files in that directory
+	local h_files = vim.fn.glob(dir .. "/*.h", false, true)
+	local hpp_files = vim.fn.glob(dir .. "/*.hpp", false, true)
+
+	local files = {}
+	vim.list_extend(files, h_files)
+	vim.list_extend(files, hpp_files)
+
+	if #files == 0 then
+		vim.notify("No .h or .hpp files found in " .. dir, vim.log.levels.WARN)
+		return
+	end
+
+	-- Strip extensions + paths
+	local classes = {}
+	for _, file in ipairs(files) do
+		table.insert(classes, vim.fn.fnamemodify(file, ":t:r"))
+	end
+
 	vim.ui.select(classes, {
 		prompt = "Select Class",
-	}, switch_to_class)
+	}, function(selected)
+		if not selected then
+			return
+		end
+		switch_to_class(dir .. "/" .. selected)
+	end)
 end
 
 -- Create user command
